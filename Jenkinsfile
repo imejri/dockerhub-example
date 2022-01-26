@@ -1,5 +1,4 @@
 
-def ARTIFACTORY_SERVER='http://artifactory-server.sofa.snm:8089/artifactory'
 pipeline {
   agent { label 'centos' }
   options {
@@ -7,6 +6,7 @@ pipeline {
   }
   environment {
     DOCKERHUB_CREDENTIALS = credentials('docker-hub-issam')
+    ARTIFACTORY_SERVER='http://artifactory-server.sofa.snm:8089/artifactory'
   }
   stages {
     stage('Build') {
