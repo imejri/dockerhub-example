@@ -28,7 +28,6 @@ pipeline {
         sh './jenkins/variable.sh'
       }
     }
-  }
   post {
     always {
       sh './jenkins/logout.sh'
