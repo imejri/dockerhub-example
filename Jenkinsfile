@@ -1,5 +1,5 @@
 
-def ARTICATORY_SERVER='http://artifactory-server.sofa.snm:8089/artifactory'
+def ARTIFACTORY_SERVER='http://artifactory-server.sofa.snm:8089/artifactory'
 pipeline {
   agent { label 'centos' }
   options {
