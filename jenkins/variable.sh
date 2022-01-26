@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "the workspace ${env.WORKSPACE}"
+echo "the workspace $WORKSPACE"
