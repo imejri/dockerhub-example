@@ -12,6 +12,11 @@ pipeline {
         sh './jenkins/build.sh'
       }
     }
+    stage('print variable') {
+      steps {
+        sh './jenkins/variable.sh'
+      }
+    }
     stage('Login') {
       steps {
         sh './jenkins/login.sh'
@@ -23,11 +28,6 @@ pipeline {
       }
     }
   }
-  stage('print variable') {
-      steps {
-        sh './jenkins/variable.sh'
-      }
-    }
   post {
     always {
       sh './jenkins/logout.sh'
