@@ -6,7 +6,7 @@ pipeline {
   }
   environment {
     DOCKERHUB_CREDENTIALS = credentials('docker-hub-issam')
-    ARTIFACTORY_SERVER='http://artifactory-server.sofa.snm:8089/artifactory'
+    ARTIFACTORY_SERVER=
   }
   stages {
     stage('Build') {
