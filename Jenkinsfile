@@ -6,7 +6,8 @@ pipeline {
   }
   environment {
     DOCKERHUB_CREDENTIALS = credentials('docker-hub-issam')
-    ARTIFACTORY_SERVER=
+    ARTIFACTORY_SERVER='test.pme.com'
+    RUNNING_VERSION='1.2.0'
   }
   stages {
     stage('Build') {
