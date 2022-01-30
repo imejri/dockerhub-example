@@ -22,6 +22,10 @@ pipeline {
       steps {
         script {
           echo "the file is ${file}"
+          withCredentials([sshUserPrivateKey(credentialsId: 'ssh-cred', keyFileVariable: 'MYKEY', usernameVariable: 'USERNAME')]) {
+            echo "username is ${USERNAME}"
+            echo "private key is ${MYKEY}"
+}
         sh './jenkins/variable.sh'
         } //script
       } //steps
