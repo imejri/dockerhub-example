@@ -17,10 +17,13 @@ pipeline {
     }
     stage('print variable') {
       steps {
+        script {
         def file='config/file'
         sh './jenkins/variable.sh'
-      }
-    }
+        } //script
+      } //steps
+    } // stage
+    
     stage('Login') {
       steps {
         sh './jenkins/login.sh'
