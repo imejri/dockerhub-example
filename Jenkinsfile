@@ -17,6 +17,7 @@ pipeline {
     }
     stage('print variable') {
       steps {
+        def file='config/file'
         sh './jenkins/variable.sh'
       }
     }
