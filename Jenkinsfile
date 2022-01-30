@@ -16,9 +16,11 @@ pipeline {
       }
     }
     stage('print variable') {
+      environment {
+        file="config/file"
+      }
       steps {
         script {
-        file="config/file"
           echo "the file is ${file}"
         sh './jenkins/variable.sh'
         } //script
