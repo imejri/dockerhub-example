@@ -19,6 +19,7 @@ pipeline {
       steps {
         script {
         def file='config/file'
+          echo "the file is ${file}"
         sh './jenkins/variable.sh'
         } //script
       } //steps
