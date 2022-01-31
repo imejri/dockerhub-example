@@ -25,9 +25,9 @@ pipeline {
           withCredentials([sshUserPrivateKey(credentialsId: 'ssh-cred', keyFileVariable: 'MYKEY', usernameVariable: 'USERNAME')]) {
             echo "username is ${USERNAME}"
             echo "private key is ${MYKEY}"
-            sh 'ssh -i ${MYKEY} -o StrictHostKeyChecking=no 64.225.51.239 ${USERNAME}@64.225.51.239'
+            //sh 'ssh -i ${MYKEY} -o StrictHostKeyChecking=no ${USERNAME}@64.225.51.239'
             sh './jenkins/variable.sh'
-}
+        } //withCredentials
         sh './jenkins/variable.sh'
         } //script
       } //steps
