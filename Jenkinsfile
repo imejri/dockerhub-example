@@ -28,6 +28,7 @@ pipeline {
             //sh 'ssh -i ${MYKEY} -o StrictHostKeyChecking=no ${USERNAME}@64.225.51.239'
             sh './jenkins/variable.sh'
         } //withCredentials
+          // les identifiants de connexion ne sont pas prise en charge dans ce contexte
         sh './jenkins/variable.sh'
         } //script
       } //steps
